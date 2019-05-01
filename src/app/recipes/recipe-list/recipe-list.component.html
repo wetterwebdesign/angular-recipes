@@ -4,14 +4,10 @@
   </div>
   <div class="col-12">
     <ul class="list-group">
-      <li class="list-group-item my-5" *ngFor="let recipe of recipes">
-          <a href="#" class="">
-            <img [src]="recipe.imagePath" alt="..." class="rounded img-fluid float-left mb-3">
-            <span class="d-block h2">{{recipe.name}}</span>
-            {{recipe.description}}<br>
-          </a>
-      </li>
+      <app-recipe-item 
+        *ngFor="let recipeEl of recipes" 
+        [recipe]="recipeEl"
+        (recipeSelected)="onRecipeSelected(recipeEl)"></app-recipe-item>
     </ul>
-    <app-recipe-item></app-recipe-item>
   </div>
 </div>

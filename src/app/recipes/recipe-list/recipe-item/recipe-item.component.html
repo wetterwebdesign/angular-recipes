@@ -1,3 +1,7 @@
-<p>
-  recipe-item works!
-</p>
+<li class="list-group-item my-5">
+  <a (click)="onSelected()">
+    <img [src]="recipe.imagePath" alt="..." class="rounded img-fluid float-left mb-3">
+    <span class="d-block h2">{{recipe.name}}</span>
+    {{recipe.description}}<br>
+  </a>
+</li>
